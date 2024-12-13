@@ -1,30 +1,40 @@
 package org.example;
 
+// Klasa reprezentująca osobę z polami różnych typów.
 public class Person {
-    private String name;
-    private String surname;
-    private int age;
+    private int intField;          // Pole typu int
+    private String stringField;    // Pole typu String
+    private float floatField;      // Pole typu float
+    private boolean booleanField;  // Pole typu boolean
 
-    public Person(String name, String surname, int age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
+    // Konstruktor klasy Person
+    public Person(int intField, String stringField, float floatField, boolean booleanField) {
+        this.intField = intField;
+        this.stringField = stringField;
+        this.floatField = floatField;
+        this.booleanField = booleanField;
     }
 
-    public String getName() {
-        return name;
+    // Gettery dla pól
+    public int getIntField() {
+        return intField;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getStringField() {
+        return stringField;
     }
 
-    public int getAge() {
-        return age;
+    public float getFloatField() {
+        return floatField;
     }
 
+    public boolean isBooleanField() {
+        return booleanField;
+    }
+
+    // Przekształcenie obiektu Person na tekst w formacie CSV
     @Override
     public String toString() {
-        return name + "," + surname + "," + age;
+        return intField + "," + stringField + "," + floatField + "," + booleanField;
     }
 }
